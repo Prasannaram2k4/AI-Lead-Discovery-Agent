@@ -34,7 +34,7 @@ https://github.com/user-attachments/assets/ac232bff-a30d-47cb-b757-aef52e4ee52c
 <img width="1301" height="728" alt="Screenshot 2026-10-01 at 3 15 47 AM" src="https://github.com/user-attachments/assets/67199542-532f-4737-bab4-b00854589c59" />
 
 
-<img width="1298" height="819" alt="Screenshot 2026-10-01 at 3 17 30 AM" src="https://github.com/user-attachments/assets/7de6a5b4-bea7-4376-9c4e-5c3e8a921f0e" />
+
 
 
 ## 🛠️ Tech Stack
@@ -50,6 +50,39 @@ https://github.com/user-attachments/assets/ac232bff-a30d-47cb-b757-aef52e4ee52c
    git clone https://github.com/yourusername/ai-lead-discovery-agent.git
    cd ai-lead-discovery-agent
 
+2. **Install dependencies:**
 
+   ```bash
+    pip install playwright groq python-dotenv
+   
+ 3. **Install Playwright browsers:**
+     
+    ```bash
+       playwright install chromium
+
+
+ 4. **Set up Environment Variables: Create a .env file in the root directory and add your credentials:**
+
+     ```bash
+      env
+      GROQ_KEY=your_groq_api_key_here
+      EMAIL=your_bark_email@example.com
+      PASSWORD=your_bark_password
+
+ 5. **Run the agent directly from your terminal:**
+
+    ```bash
+      python agent.py
+      
+
+**Workflow Summary:**
+
+1. The agent launches a browser and logs into Bark.com.
+2. It scrapes the latest leads (up to 10) from your dashboard.
+3. It analyzes each lead via the Groq API to determine an ICP score (0.0 to 1.0).
+4. For qualified leads, it generates a customized outreach pitch.
+5. Results are saved to results.json and a clean summary report is printed to the console.
+
+<img width="1298" height="819" alt="Screenshot 2026-10-01 at 3 17 30 AM" src="https://github.com/user-attachments/assets/7de6a5b4-bea7-4376-9c4e-5c3e8a921f0e" />
 
 
